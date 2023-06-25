@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# E-commerce Front-end Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the E-commerce Front-end Boilerplate! This project was created to provide you with a solid foundation for building your own E-commerce website. It comes equipped with essential features and functionality, allowing you to focus on customizing and expanding your application.
 
-## Available Scripts
+## Technologies used
 
-In the project directory, you can run:
+* React.js
+* Redux-Toolkit
+* React-router-dom
+* Ant Design
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Authentication and Registration: Easily set up user authentication and registration functionalities, ensuring secure access to your E-commerce platform.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Admin Panel: Gain administrative control with an intuitive admin page, where you can manage products, perform CRUD operations (create, read, update, delete), and more.
 
-### `npm test`
+### Installing https://github.com/davidarestakesyan/E-Commerce-Frontend.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* git clone https://github.com/sergey-antonyan/E-commerce-React.git cd .. "your directory name"
 
-### `npm run build`
+* Install the necessary dependencies using npm or yarn.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Customize the design and layout of your E-commerce site according to your needs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Configure the authentication system and set up user roles and permissions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Integrate with your preferred database solution to store and retrieve product information.
 
-### `npm run eject`
+* Deploy your front-end application to a hosting provider of your choice.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Feel free to explore the codebase and make any modifications to suit your specific requirements.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Contributions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Contributions, bug reports, and feature requests are always welcome! If you encounter any issues or have suggestions for improvement, please open an issue on this repository.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# E-commerce Online Shop - Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Description
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* This project is designed to provide a comprehensive backend solution for launching your E-commerce online shop. It comes equipped with a feature-rich boilerplate that is fully prepared to handle a variety of essential backend tasks, ensuring a smooth and secure experience for your customers.
 
-### Code Splitting
+* Furthermore, the boilerplate offers a powerful CRUD (Create, Read, Update, Delete) functionality, enabling you to effortlessly manage your inventory, product listings, and customer information. This facilitates easy additions, updates, and removals of products, ensuring your online shop remains up-to-date with the latest offerings.own.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Features
 
-### Making a Progressive Web App
+* User registration and login
+* Authentication via JWT
+* CRUD for users, categories, products, shoping_cart
+* Sqlite3 database
+* Seeding
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Installing
 
-### Advanced Configuration
+https://github.com/davidarestakesyan/E-Commerce-Backend.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Getting Started
 
-### Deployment
+To test the application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Register on https://sqlitebrowser.org/dl/
+* Create your free shared database and choose a username and password for it
+* Add your username, password and database to the config.json file
+* Example "username": "davidarestakesyan",
+* "password": "test1234", "database": "my_database",
+* Choose a random string as JWT secret or generate it in your terminal
 
-### `npm run build` fails to minify
+  node
+console.log(crypto.randomBytes(64).toString('hex'));
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Copy it and place in in your .env file
+* Example SECRET="yourrandomlygeneratedsecret"
+* Start the application
+
+  nodemon server.js
+
+
+* Register via http://localhost:3000/register with username and password in the body as JSON format via Postman or any alternatives
+* If successful, you should get a verification 
+* Your response should have a JSON token
+Place it inside the Authentication tab Bearer Token
+* Make a request to http://localhost:3000/users
+* If you get 200 OK and {"users": []} as a result, everything was successful
+* From there you can edit the app based on your needs
+* If you want to seed your post database with some random information, run node post_seed.js in the seeds folder, click "y" to delete all previous records or anything else to just add data without deleting anything

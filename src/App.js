@@ -9,8 +9,8 @@ import LoginPagef from './components/LoginPage';
 import Createproductsf from './pages/Createproductsf';
 import Createcategorysf from './pages/Createcategorysf';
 import ProtectRoute from './ProtectRoute/ProtectRoute';
-import Navbar from './components/Navbar';
 import Product from './Userpage/Product';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Routes>
           <Route path="/Register" element={<RegisterPagef />} /> 
           <Route path='LoginPage'element = {<LoginPagef/>} /> 
-          <Route path='/'element = {<Navbar/>} /> 
+          <Route path='/'element = {<HomePage/>} />                   
           <Route path='/userpage'element = {<Product/>} />
            <Route path="AdminPage" element={<ProtectRoute> <AdminPagef/></ProtectRoute >} >
             <Route path="allusers" element={<Allusersf/>}/>

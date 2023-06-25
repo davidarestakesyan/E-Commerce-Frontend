@@ -38,9 +38,9 @@ export default function Navbar() {
             <li><Link className="active" to="/">Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to="/userpage">Products</Link></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
-            <li><Link to="/buyonline">Buy Online</Link></li>
+            <li><Link to="/LoginPage">Log In</Link></li>
+            <li><Link to="/Register">Register</Link></li>
           </ul>
         </div>
         <div id="mobile" onClick={handleClick}>
